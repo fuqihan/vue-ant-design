@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <!-- <router-view/> -->
+    <f-button type="primary">fuqihan</f-button>
   </div>
 </template>
 
 <script>
+import button from './components/button/button'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    'f-button': button
+  }
 }
 </script>
 
