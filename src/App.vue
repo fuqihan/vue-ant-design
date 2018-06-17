@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- <router-view/> -->
-    <f-button type="primary">fuqihan</f-button>
+    <f-button type="primary" :onClick="aaa">fuqihan</f-button>
   </div>
 </template>
 
@@ -9,8 +9,18 @@
 import button from './components/button/button'
 export default {
   name: 'App',
+  data() {
+    return {
+      test: 'fuqihan'
+    }
+  },
   components: {
     'f-button': button
+  },
+  methods: {
+    aaa() {
+      console.log(this.test)
+    }
   }
 }
 </script>

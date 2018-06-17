@@ -49,7 +49,7 @@ export default {
       }
     },
     onClick: {
-      type: Object
+      type: Function
     }
   },
   computed: {
@@ -75,6 +75,7 @@ export default {
   methods: {
     handleClick(e) {
       try {
+        if (this.$props.loading) return;
         //   this 指向不对
         this.$props.onClick(e);
       } catch (error) {}
